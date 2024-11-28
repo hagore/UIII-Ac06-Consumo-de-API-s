@@ -1,0 +1,97 @@
+/* Reseteo de márgenes y bordes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f3f4f6;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Estilo para cada tarjeta de libro */
+.contenedor .pelicula {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contenedor .pelicula:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Título del libro */
+.contenedor .pelicula .titulo {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Información adicional (autor y año) */
+.contenedor .pelicula p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Portada del libro */
+.contenedor .pelicula .poster {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: #ddd;
+}
+
+/* Barra de paginación */
+.paginacion {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.paginacion button {
+    cursor: pointer;
+    border: none;
+    background: #0077cc;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.paginacion button:hover {
+    background: #005fa3;
+    transform: translateY(-2px);
+}
+
+.paginacion button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
